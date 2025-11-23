@@ -22,12 +22,10 @@ for song_name, genre in songs:
 most_popular_genre = max(genre_count, key=genre_count.get)
 
 print("=== YOUR MUSIC LIBRARY===")
-print(songs[0])
-print(songs[1])
-print(songs[2])
-print(songs[3])
-print(songs[4])
+for song_name, genre in songs:
+    print(f"{song_name.capitalize()}({genre.capitalize()})")
 
-print("===Genre STATISTICS===")
-print(genre_count)
-print(f"Most popular genre: {most_popular_genre}")
+print("\n===Genre STATISTICS===")
+for genre, count in genre_count.items():
+    print(f"{genre.capitalize()}:{count} songs")
+print(f"Most popular genre: {most_popular_genre.capitalize()}")
