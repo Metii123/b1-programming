@@ -24,8 +24,14 @@ for score in scores:
 
 print("=== Student Records ===")
 print(student_records)
-
+print()
 print("=== Class Statistics ===")
 print(f"Highest Score: {stats["highest"]}")
 print(f"Lowest Score: {stats["lowest"]}")
 print(f"Average Score: {stats["average"]}")
+print()
+print("===Unique Scores===")
+print(unique_scores)
+print(f"Total unique scores: {len(unique_scores)}")
+print()
+print("=== Grade Distribution ===")
