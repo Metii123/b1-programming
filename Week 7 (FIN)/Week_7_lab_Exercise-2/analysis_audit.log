@@ -1,0 +1,32 @@
+2026-02-21 17:15:14,491-INFO-=== Log Analysis Started ===
+2026-02-21 17:15:14,491-INFO-Reading server.log
+2026-02-21 17:15:14,491-INFO-Read 20 lines successfully
+2026-02-21 17:15:14,491-INFO-Filtering error entries
+2026-02-21 17:15:14,491-INFO-Found 0 errors (0.00%)
+2026-02-21 17:15:14,491-INFO-Writing results to errors_log.txt
+2026-02-21 17:15:14,491-INFO-Analysis completed successfully
+2026-02-21 17:15:14,491-INFO-=== Log Analysis Finished ===
+2026-02-21 17:38:38,840-INFO-=== Log Analysis Started ===
+2026-02-21 17:38:38,840-INFO-Starting analysis of server.log
+2026-02-21 17:38:38,840-WARNING-Forbidden access attempt: 192.168.1.102 -> /admin
+2026-02-21 17:38:38,840-WARNING-Brute force attempt from 203.0.113.77 - 3 failed attempts
+2026-02-21 17:38:38,840-WARNING-Brute force attempt from 203.0.113.77 - 4 failed attempts
+2026-02-21 17:38:38,840-WARNING-Brute force attempt from 203.0.113.77 - 5 failed attempts
+2026-02-21 17:38:38,840-WARNING-Forbidden access attempt: 198.51.100.42 -> /admin
+2026-02-21 17:38:38,840-INFO-Analysis complete: 20 requests processed
+2026-02-21 17:38:38,841-INFO-Summary report generated
+2026-02-21 17:38:38,841-INFO-Security report generated
+2026-02-21 17:38:38,841-INFO-Error log generated
+2026-02-21 17:38:38,841-INFO-=== Log Analysis Finished ===
+2026-02-21 17:40:03,077-INFO-=== Log Analysis Started ===
+2026-02-21 17:40:03,077-INFO-Starting analysis of server.log
+2026-02-21 17:40:03,077-WARNING-Forbidden access attempt: 192.168.1.102 -> /admin
+2026-02-21 17:40:03,078-WARNING-Brute force attempt from 203.0.113.77 - 3 failed attempts
+2026-02-21 17:40:03,078-WARNING-Brute force attempt from 203.0.113.77 - 4 failed attempts
+2026-02-21 17:40:03,078-WARNING-Brute force attempt from 203.0.113.77 - 5 failed attempts
+2026-02-21 17:40:03,078-WARNING-Forbidden access attempt: 198.51.100.42 -> /admin
+2026-02-21 17:40:03,078-INFO-Analysis complete: 20 requests processed
+2026-02-21 17:40:03,078-INFO-Summary report generated
+2026-02-21 17:40:03,078-INFO-Security report generated
+2026-02-21 17:40:03,078-INFO-Error log generated
+2026-02-21 17:40:03,078-INFO-=== Log Analysis Finished ===
