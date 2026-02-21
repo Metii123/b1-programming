@@ -1,0 +1,39 @@
+PRICING REPORT
+--------------------------------------------------
+Product:           Laptop Computer
+Base Price:        €999.99
+Category:          Electronics (10% off)
+Tier:              Premium (5% off)
+Total Discount:    14.50%
+Final Price:       €854.99
+--------------------------------------------------
+Product:           Winter Jacket
+Base Price:        €129.99
+Category:          Clothing (15% off)
+Tier:              Standard (0% off)
+Total Discount:    15.00%
+Final Price:       €110.49
+--------------------------------------------------
+Product:           Python Programming Book
+Base Price:        €49.99
+Category:          Books (5% off)
+Tier:              Standard (0% off)
+Total Discount:    5.00%
+Final Price:       €47.49
+--------------------------------------------------
+Product:           Coffee Maker
+Base Price:        €79.99
+Category:          Home (12% off)
+Tier:              Budget (2% off)
+Total Discount:    13.76%
+Final Price:       €68.98
+--------------------------------------------------
+Product:           Wireless Headphones
+Base Price:        €199.99
+Category:          Electronics (10% off)
+Tier:              Premium (5% off)
+Total Discount:    14.50%
+Final Price:       €170.99
+--------------------------------------------------
+
+End of Report
