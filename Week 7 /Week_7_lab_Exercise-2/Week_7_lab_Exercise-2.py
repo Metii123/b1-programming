@@ -25,7 +25,6 @@ class LogAnalyzer:
             r'(\S+) - - \[(.*?)\] "(\S+) (\S+) \S+" (\d+) (\d+)'
         )
 
-        # Statistics
         self.total_requests = 0
         self.unique_ips = set()
         self.http_methods = Counter()
@@ -33,7 +32,6 @@ class LogAnalyzer:
         self.status_codes = Counter()
         self.errors = []
 
-        # Security tracking
         self.failed_logins = defaultdict(list)
         self.forbidden_access = []
         self.security_incidents = []
@@ -64,14 +62,12 @@ class LogAnalyzer:
                 self.security_incidents.append(incident)
                 logging.warning(incident)
 
-        # Track forbidden access
         if entry['status'] == 403:
             incident = f"Forbidden access attempt: {entry['ip']} -> {entry['url']}"
             self.forbidden_access.append(incident)
             self.security_incidents.append(incident)
             logging.warning(incident)
 
-        # Check for SQL injection patterns
         sql_patterns = ['union', 'select', 'drop', 'insert', '--', ';']
         url_lower = entry['url'].lower()
         if any(pattern in url_lower for pattern in sql_patterns):
@@ -91,18 +87,15 @@ class LogAnalyzer:
                             logging.debug(f"Line {line_num}: Could not parse")
                             continue
 
-                        # Update statistics
                         self.total_requests += 1
                         self.unique_ips.add(entry['ip'])
                         self.http_methods[entry['method']] += 1
                         self.urls[entry['url']] += 1
                         self.status_codes[entry['status']] += 1
 
-                        # Track errors
                         if entry['status'] >= 400:
                             self.errors.append(entry)
 
-                        # Security analysis
                         self.analyze_security(entry)
 
                     except Exception as e:
@@ -118,7 +111,7 @@ class LogAnalyzer:
             logging.error(f"Permission denied reading '{self.log_file}'")
             raise
 
-    def generate_summary_report(self): #Generate summary report
+    def generate_summary_report(self): 
         try:
             with open('summary_report.txt', 'w') as f:
                 f.write("=" * 70 + "\n")
@@ -149,7 +142,7 @@ class LogAnalyzer:
         except PermissionError:
             logging.error("Cannot write summary_report.txt")
 
-    def generate_security_report(self): #Generate security incidents report
+    def generate_security_report(self):
         try:
             with open('security_incidents.txt', 'w') as f:
                 f.write("=" * 70 + "\n")
@@ -180,7 +173,7 @@ class LogAnalyzer:
         except PermissionError:
             logging.error("Cannot write security_incidents.txt")
 
-    def generate_error_log(self): #Generate error log
+    def generate_error_log(self):
         try:
             with open('error_log.txt', 'w') as f:
                 f.write("=" * 70 + "\n")
